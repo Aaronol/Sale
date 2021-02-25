@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
@@ -73,13 +73,13 @@
 										<td>${houselist.status}</td>
 										<td>
 										<c:choose>
-										<c:when test="${ houselist.status=='未租赁'}">
+										<c:when test="${ houselist.status=='未售出'}">
 													<a class="link-update"
 											href="applycheckuserlist.action?id=${houselist.id}">申请看房</a>
 											&nbsp;&nbsp; 
 												</c:when >
-												<c:when test="${ houselist.status=='已租赁'}">
-													该房已被租赁
+												<c:when test="${ houselist.status=='已售出'}">
+													该房已售出
 											&nbsp;&nbsp; 
 												</c:when >
 												<c:otherwise>

@@ -78,7 +78,7 @@ public class ApplyController {
 		Integer user_id=user1.getId();
 		Userlist userlist=userlistService.findhasuserlist(user_id);
 		Houselist houselist=houselistService.findhouseid(house_id);
-		houselist.setStatus("已租赁");
+		houselist.setStatus("已售出");
 		houselistService.updatehousestatus(houselist);
 		Zulist zulist=new Zulist();
 		zulist.setHouse_id(house_id);
@@ -92,13 +92,13 @@ public class ApplyController {
 	public String refuseapply(String house_id,Model model){
 		Houselist houselist=new Houselist();
 		houselist.setHouseid(house_id);
-		houselist.setStatus("未租赁");
+		houselist.setStatus("未出售");
 		applyService.refuseapply(houselist);
 		
 		return "redirect:findapplylist.action";
 	}
 	
-	//租客查看自己的 看房申请
+	//查看自己的 看房申请
 	@RequestMapping("/getmyapply")
 	public String getmyapply(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
             @RequestParam(required=false,defaultValue="2") Integer pageSize){

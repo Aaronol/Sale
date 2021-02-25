@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
@@ -68,12 +68,12 @@
 										<td>${apply.userlist.phone}</td>
 										<td>
 										<a class="link-update"
-											href="/text2/zulist/toaddhetong.action?house_id=${apply.house_id}">同意租赁</a>
+											href="/text2/zulist/toaddhetong.action?house_id=${apply.house_id}">出售</a>
 											&nbsp;&nbsp; 
 											<input type="hidden" name="id" value="${houselist.id}"/>
 											<a class="link-del"
 											 href="/text2/refuseapply.action?house_id=${apply.house_id}"
-											onclick="return window.confirm('确定要拒绝该租客的申请吗？')">拒绝租赁</a></td>
+											onclick="return window.confirm('确定要结束该客户的申请吗？')">结束</a></td>
 										
 											
 									</td>		

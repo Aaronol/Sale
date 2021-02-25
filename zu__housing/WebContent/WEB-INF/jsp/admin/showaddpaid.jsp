@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
@@ -24,7 +24,7 @@
 	var error="${param.error}";
 	if(error=="inserttopaid"){
 
-	alert("租金信息添加成功！");
+	alert("信息添加成功！");
 	}
 		
 	</script>

@@ -29,7 +29,7 @@ public class HetongController {
 	@Autowired
 	private CheckoutService checkoutService;
 	
-	//新增合同信息，修改房屋列表的状态，从申请列表中删除，增添到租赁列表当中
+	//新增合同信息，修改房屋列表的状态，从申请列表中删除，增添到售出列表当中
 	@RequestMapping("/inserthetong")
 	public String inserthetong(Model model,Hetong hetong){
 		//新增合同信息
@@ -37,9 +37,9 @@ public class HetongController {
 		Hetong hetong1=hetongService.findhetong(hetong.getHouse_id());
 		//修改房屋列表状态
 		Houselist houselist=houselistService.findhouseid(hetong1.getHouse_id());
-		houselist.setStatus("已租赁");
+		houselist.setStatus("已售出");
 		houselistService.updatehousestatus(houselist);
-		//添加到租赁列表当中
+		//添加到售出列表当中
 		Zulist zulist=new Zulist();
 		Apply apply=applyService.findbyhouse_id(hetong.getHouse_id());
 		zulist.setHouse_id(hetong.getHouse_id());
@@ -74,8 +74,7 @@ public class HetongController {
 		
 		return "redirect:/zulist/findzulist.action";
 	}
-	//终止合同操作：删除合同，插入已退租列表，删除在租列表，删除房屋列表
-	
+
 	@RequestMapping("/deletehetong")
 	public String deletehetong(String house_id,Model model){
 		hetongService.deletehetong(house_id);
@@ -83,7 +82,7 @@ public class HetongController {
 		Checkout checkout=new Checkout();
 		checkout.setHouse_id(house_id);
 		checkout.setAddress(zulist.getAddress());
-		checkout.setStatus("已退租");
+		checkout.setStatus("已退");
 		checkout.setUserlist_id(zulist.getUserlist_id());
 		checkoutService.insertcheckout(checkout);
 		houselistService.deletehousebyhouseid(house_id);

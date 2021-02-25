@@ -40,6 +40,11 @@ public class ApplyServiceImpl implements ApplyService {
 	}
 
 	@Override
+	public List<Apply> findbyusr_id(String user_id) {
+		return applyMapper.findbyusr_id(user_id);
+	}
+
+	@Override
 	public void deletebyhouse_id(String house_id) {
 		applyMapper.deletebyhouse_id(house_id);
 		

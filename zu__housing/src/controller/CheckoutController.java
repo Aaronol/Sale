@@ -40,13 +40,13 @@ public class CheckoutController {
 		model.addAttribute("mainPage", "checkout.jsp");
 		return "admin/main1";
 	}
-	//租客删除自己已退租列表
+	//删除自己已退列表
 	@RequestMapping("/deletecheckout")
 	public String deletecheckout(Integer id ) {
 		checkoutService.deletecheckout(id);
 		return "redirect:/checkout/getmycheckout.action";
 	}
-	//租客删除自己已退租列表
+	//删除自己已列表
 		@RequestMapping("/admindeletecheckout")
 		public String admindeletecheckout(Integer id ) {
 			checkoutService.deletecheckout(id);

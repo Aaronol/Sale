@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
    <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/libs/modernizr.min.js"></script>
@@ -45,7 +45,7 @@
                 <form action="/text2/wrong/selectall.action" method="post" name="myform">
                     <table class="search-tab">
                         <tr>
-                            <th width="120">租客姓名：</th>
+                            <th width="120">客户姓名：</th>
                             <td><input class="common-text" placeholder="姓名" name="zuname" value="${vo.zuname }" id="zuname" type="text"></td>
                             <th width="70">起始日期:</th>
                             <td><input class="common-text" name="fromdate" placeholder="报障日期" value="${vo.fromdate}" id="fromdate" type="text" readonly></td>
@@ -77,7 +77,7 @@
 									<td>房屋id</td>
 									<td>地址</td>
 									<td>报障日期</td>
-									<td>租赁人</td>
+									<td>姓名</td>
 									<td>报障内容</td>
 									<td>状态</td>
 									<td>操作</td>

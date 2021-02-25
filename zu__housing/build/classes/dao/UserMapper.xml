@@ -211,4 +211,7 @@
       type = #{type,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getNowMaxId" resultType="int">
+    SELECT MAX(id) FROM user
+  </select>
 </mapper>

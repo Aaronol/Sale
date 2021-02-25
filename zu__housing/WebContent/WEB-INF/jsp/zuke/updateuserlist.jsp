@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/libs/modernizr.min.js"></script>
@@ -124,7 +124,7 @@
                                 <th></th>
                                 <td>
                                     <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
-                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                    <input class="btn btn6" onclick="location='/text2/findhasuserlist.action'" value="返回" type="button">
                                 </td>
                             </tr>
 							<tr>
@@ -136,4 +136,7 @@
           </div>
     
 </body>
+<script>
+
+</script>
 </html>

@@ -41,7 +41,7 @@ public class WrongController {
   //管理员查找所有已处理的报障
   @RequestMapping("/selectall")
   public String selectall(Model model,QueryVo vo,@RequestParam(required=false,defaultValue="1") Integer page,
-          @RequestParam(required=false,defaultValue="2") Integer pageSize){
+          @RequestParam(required=false,defaultValue="10") Integer pageSize){
 		PageHelper.startPage(page, pageSize);
 		List<Solve> list=solveService.selectall(vo);
 		PageInfo<Solve> p=new PageInfo<Solve>(list);
@@ -53,7 +53,7 @@ public class WrongController {
 		model.addAttribute("vo", vo);
 		return "admin/main1";
 	}
-//租客查找自己已处理的报障
+//查找自己已处理的报障
 		@RequestMapping("/findmysolve")
 		public String findmysolve(HttpSession httpSession,Model model,QueryVo vo,@RequestParam(required=false,defaultValue="1") Integer page,
 	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
@@ -84,7 +84,7 @@ public class WrongController {
 				solveService.deletesolve(id);
 				return "redirect:findmypaid.action";
 			}
-			//租客跳到我要报障页面
+			//跳到我要报障页面
 			@RequestMapping("/showaddwrong")
 			public String showaddwrong(HttpSession httpSession,Model model,@RequestParam(required=false,defaultValue="1") Integer page,
 		            @RequestParam(required=false,defaultValue="2") Integer pageSize)throws Exception{
@@ -127,7 +127,7 @@ public class WrongController {
 				model.addAttribute("mainPage", "wrong.jsp");
 				return "admin/main1";
 			}
-			//租客查看自己的未处理报障
+			//查看自己的未处理报障
 			@RequestMapping("/mywronglist")
 			public String mywronglist(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
 		            @RequestParam(required=false,defaultValue="2") Integer pageSize){

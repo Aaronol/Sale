@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
@@ -81,48 +81,18 @@
                     </div>
                 </li>
                 <li>
-                    <a class="a"><i class="icon-font">&#xe018;</i>租赁及合同信息</a>
+                    <a class="a"><i class="icon-font">&#xe018;</i>销售预定</a>
              <div class="p">         <ul class="sub-menu">
-                        <li><a href="/text2/zulist/findzulist.action"><i class="icon-font">&#xe017;</i>在租列表</a></li>
-                      
-                        <li><a href="/text2/checkout/getallcheckout.action"><i class="icon-font">&#xe037;</i>已退租列表</a></li>
-                        
+                <li><a href="/text2/findapplylist.action"><i class="icon-font">&#xe037;</i>看房申请</a></li>
+                        <li><a href="/text2/zulist/findzulist.action"><i class="icon-font">&#xe017;</i>已售信息</a></li>
                     </ul>
                     </div>
                 </li>
                 <li>
-                    <a class="a"><i class="icon-font">&#xe018;</i>申请列表</a>
-        <div class="p">            <ul class="sub-menu">
-                        <li><a href="/text2/findapplylist.action"><i class="icon-font">&#xe037;</i>看房申请</a></li>
-                       	<li><a href="/text2/applyout/findallapplyout.action"><i class="icon-font">&#xe037;</i>退租申请</a></li>
-                        
-                    </ul>
-                     </div>
-                </li>
-                <li>
-                    <a class="a"><i class="icon-font">&#xe018;</i>报障模块</a>
+                    <a class="a"><i class="icon-font">&#xe018;</i>售后服务管理</a>
        <div class="p">              <ul class="sub-menu">
                         <li><a href="/text2/wrong/wronglist.action"><i class="icon-font">&#xe017;</i>待处理报障</a></li>
                        	<li><a href="/text2/wrong/selectall.action"><i class="icon-font">&#xe017;</i>已处理报障</a></li>
-                        
-                    </ul>
-                     </div>
-                </li>
-                 <li>
-                    <a class="a"><i class="icon-font">&#xe003;</i>租金信息</a>
-            <div class="p">          <ul class="sub-menu">
-                    <li><a href="/text2/paid/showaddpaid.action"><i class="icon-font">&#xe008;</i>我要收租</a></li>
-                        <li><a href="/text2/paid/topaidlist.action"><i class="icon-font">&#xe008;</i>租客待缴租金</a></li>
-                        <li><a href="/text2/paid/selectall.action"><i class="icon-font">&#xe008;</i>租客已缴租金</a></li>
-       
-                    </ul>
-                     </div>
-                </li>
-                <li>
-                    <a class="a"><i class="icon-font">&#xe018;</i>我的日程</a>
-            <div class="p">          <ul class="sub-menu">
-                        <li><a href="/text2/schedule/selectAll.action"><i class="icon-font">&#xe017;</i>查看日程</a></li>
-                       	<li><a href="/text2/schedule/toinsert.action"><i class="icon-font">&#xe017;</i>添加日程</a></li>
                         
                     </ul>
                      </div>

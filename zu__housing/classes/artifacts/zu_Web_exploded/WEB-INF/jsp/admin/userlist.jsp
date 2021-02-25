@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
@@ -50,14 +50,14 @@
 							<tbody>
 								<tr
 									style="FONT-WEIGHT: bold; FONT-STYLE: normal; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none">
-									<td>租客用户名</td>
-									<td>租客姓名</td>
-									<td>租客身份证号码</td>
-									<td>租客联系电话</td>
+									<td>用户名</td>
+									<td>用户姓名</td>
+									<td>用户身份证号码</td>
+									<td>用户联系电话</td>
 									
 									
-									<td>操作<a class="link-update"
-											 href="/text2/updateuserlistbyadmin.action">新增</a></td>
+									<td>操作   <a class="link-update" style="font-size: 10px"
+											 href="/text2/updateuserlistbyadmin.action">+新增</a></td>
 								
 									
 								</tr>

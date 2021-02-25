@@ -21,7 +21,7 @@ public class TopaidServiceImpl implements TopaidService {
 	private PaidMapper paidMapper;
 	@Override
 	public void inserttopaid(Topaid topaid) {
-		topaid.setStatus("租金未缴");
+		topaid.setStatus("未缴");
 		topaidMapper.inserttopaid(topaid);
 	}
 	@Override

@@ -10,14 +10,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>房屋租赁系统</title>
+<title>房产销售系统</title>
 <link rel="stylesheet" type="text/css" href="/text2/css/styles.css">
 </head>
 <body>
 <div class="wrapper">
 
 	<div class="container">
-		<h1>房屋租赁系统</h1>
+		<h1>房产销售系统</h1>
 		<form class="form" id="loginform" action="logincheck.action" method="post">
 			<div><input type="text" name="username" placeholder="用户名" ></div>
 			<div><input type="password" name="password" placeholder="密码" ></div>
@@ -26,7 +26,7 @@
       	  	<input id="admin" type="radio" name="type" value="admin"  checked/> 管理员
 		</label>
 		<label class="radio inline">
-			<input id="zuke" type="radio" name="type" value="zuke" /> 租客
+			<input id="zuke" type="radio" name="type" value="zuke" /> 用户
 		</label>
 		</div>
         

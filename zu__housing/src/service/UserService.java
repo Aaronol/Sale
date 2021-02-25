@@ -14,4 +14,5 @@ public interface UserService {
 	User selectByPrimaryKey(Integer id);
 	int insert(User record);
 	int updateByExample(User record);
+	int getNowMaxId();
 }

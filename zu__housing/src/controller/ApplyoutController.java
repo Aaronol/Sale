@@ -31,7 +31,7 @@ public class ApplyoutController {
 	private ApplyoutService applyoutService;
 	@Autowired
 	private UserlistService userlistService;
-	//插入退租信息
+	//插入信息
 	@RequestMapping("/insertapplyout")
 	public String insertapplyout(String house_id,Model model){
 		Zulist zulist=zulistService.findzulist(house_id);
@@ -39,7 +39,7 @@ public class ApplyoutController {
 		model.addAttribute("error", "applysuccess");
 		return "redirect:/zulist/myzulist.action";
 	}
-	//查看退租申请
+	//查看申请
 	@RequestMapping("/findallapplyout")
 	public String findallapplyout(Model model ,@RequestParam(required=false,defaultValue="1") Integer page,
             @RequestParam(required=false,defaultValue="2") Integer pageSize){
@@ -51,7 +51,7 @@ public class ApplyoutController {
 		model.addAttribute("mainPage", "applyout.jsp");
 		return "admin/main1";
 	}
-	//管理员拒绝退租申请
+	//管理员拒绝申请
 	@RequestMapping("/refuseapplyout")
 	public String refuseapplyout(Model model,Integer id){
 		Applyout applyout=new Applyout();
@@ -61,21 +61,21 @@ public class ApplyoutController {
 		model.addAttribute("mainPage", "applyout.jsp");
 		return "redirect:findallapplyout.action";
 	}
-	//管理员同意退租申请
+	//管理员同意申请
 	@RequestMapping("/agreeapplyout")
 	public String agreeapplyout(Model model,Integer id){
 		applyoutService.agreeapplyout(id);
 		model.addAttribute("error", "applyoutsucess");
 		return "redirect:findallapplyout.action";
 	}
-	//删除申请退租列表
+	//删除申请列表
 		@RequestMapping("/deleteapplyout")
 		public String deleteapplyout(Model model,Integer id){
 			applyoutService.deleteapplyout(id);
 			model.addAttribute("error", "deletesucess");
 			return "redirect:findallapplyout.action";
 		}
-		//租客查看自己的 退房申请
+		//查看自己的 退房申请
 		@RequestMapping("/getmyapplyout")
 		public String getmyapplyout(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
 	            @RequestParam(required=false,defaultValue="2") Integer pageSize){

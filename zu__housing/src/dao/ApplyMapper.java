@@ -10,5 +10,5 @@ public interface ApplyMapper {
 	public List<Apply> findapplylist() throws Exception;
 	Apply findbyhouse_id(String house_id);
 	public void deletebyhouse_id(String house_id);
-	public void updateapplyout(Applyout applyout);
+	List<Apply> findbyusr_id(String user_id);
 }

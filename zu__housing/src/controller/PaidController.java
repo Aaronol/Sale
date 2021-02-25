@@ -36,7 +36,7 @@ public class PaidController {
 	private TopaidService topaidService;
 	@Autowired
 	private UserlistService userlistService;
-	//管理员查找所有已缴租金列表
+
 	@RequestMapping("/selectall")
 	public String selectall(Model model,QueryVo vo,@RequestParam(required=false,defaultValue="1") Integer page,
             @RequestParam(required=false,defaultValue="2") Integer pageSize){
@@ -51,7 +51,7 @@ public class PaidController {
 		model.addAttribute("vo", vo);
 		return "admin/main1";
 	}
-	//租客查找自己已缴租金列表
+
 		@RequestMapping("/findmypaid")
 		public String findmypaid(HttpSession httpSession,Model model,QueryVo vo,@RequestParam(required=false,defaultValue="1") Integer page,
 	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
@@ -70,19 +70,18 @@ public class PaidController {
 			model.addAttribute("vo", vo);
 			return "zuke/main";
 		}
-	//管理员删除已缴租金记录
 	@RequestMapping("/deletepaid")
 	public String deletepaid(Integer id){
 		paidService.deletepaid(id);
 		return "redirect:selectall.action";
 	}
-	//zuke删除已缴租金记录
+
 		@RequestMapping("/zukedeletepaid")
 		public String zukedeletepaid(Integer id){
 			paidService.deletepaid(id);
 			return "redirect:findmypaid.action";
 		}
-	//跳到我要收租页面
+
 	@RequestMapping("/showaddpaid")
 	public String showaddpaid(Model model,@RequestParam(required=false,defaultValue="1") Integer page,
             @RequestParam(required=false,defaultValue="2") Integer pageSize)throws Exception{
@@ -94,7 +93,7 @@ public class PaidController {
 		model.addAttribute("mainPage", "showaddpaid.jsp");
 		return "admin/main1";
 	}
-	//点击收租后跳转到添加租金信息页面
+
 	@RequestMapping("/addpaid")
 	public String addpaid(Integer id,Model model){
 		Zulist zulist=paidService.findzukezulist(id);
@@ -102,7 +101,7 @@ public class PaidController {
 		model.addAttribute("mainPage", "addpaid.jsp");
 		return "admin/main1";
 	}
-	//添加租金信息到topaid表
+
 		@RequestMapping("/inserttopaid")
 		public String inserttopaid(Topaid topaid,Model model){
 			topaidService.inserttopaid(topaid);
@@ -110,7 +109,7 @@ public class PaidController {
 			
 			return "redirect:showaddpaid.action";
 		}
-		//管理员查看所有未缴租金信息
+
 		@RequestMapping("/topaidlist")
 		public String topaidlist(Model model,@RequestParam(required=false,defaultValue="1") Integer page,
 	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
@@ -123,7 +122,7 @@ public class PaidController {
 			model.addAttribute("mainPage", "topaid.jsp");
 			return "admin/main1";
 		}
-		//租客查看自己的未缴租金
+
 		@RequestMapping("/mytopaidlist")
 		public String mytopaidlist(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
 	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
@@ -139,7 +138,7 @@ public class PaidController {
 			model.addAttribute("mainPage", "mytopaid.jsp");
 			return "zuke/main";
 		}
-		//租客进行支付操作
+
 		@RequestMapping("/gotopay")
 		public String gotopay(Integer id,Model model){
 			Date dt=new Date();
@@ -154,7 +153,7 @@ public class PaidController {
 			paid.setPaydate(paydate);
 			paid.setName(topaid.getName());
 			paid.setUserlist_id(topaid.getUserlist_id());
-			paid.setStatus("租金已缴");
+			paid.setStatus("已缴");
 			topaidService.gotopay(id, paid);
 			model.addAttribute("error", "paysucess");
 			return "redirect:findmypaid.action";

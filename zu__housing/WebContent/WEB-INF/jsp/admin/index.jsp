@@ -16,7 +16,7 @@
 </div>
 <div class="result-content">
 <div class="sidebar-title">
- <h1>欢迎来到房屋租赁系统！</h1>
+ <h1>欢迎来到房产销售系统！</h1>
         </div>
         </div>
        </body>

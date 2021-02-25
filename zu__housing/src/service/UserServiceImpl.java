@@ -47,5 +47,10 @@ public class UserServiceImpl implements UserService{
 		return userMapper.updateByPrimaryKey(record);
 	}
 
+	@Override
+	public int getNowMaxId() {
+		return userMapper.getNowMaxId();
+	}
+
 
 }

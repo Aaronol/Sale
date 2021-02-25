@@ -38,4 +38,7 @@
 	<delete id="deletebyhouse_id" parameterType="String" >
 		delete from apply where house_id=#{house_id}
 	</delete>
+	<select id="findbyusr_id" parameterType="string" resultType="Pojo.Apply">
+		select * from apply where userlist_id=#{house_id}
+	</select>
 </mapper>

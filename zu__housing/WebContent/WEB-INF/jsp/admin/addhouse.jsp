@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/libs/modernizr.min.js"></script>
@@ -101,7 +101,7 @@
                                 <td><input class="common-text" name="area" value="${houselist.area }" id="area" size="50" type="text" ></td>
                             </tr>
                            <tr>
-                                <th><i class="require-red">*</i>租金：</th>
+                                <th><i class="require-red">*</i>价格：</th>
                                 <td><input class="common-text" name="price" value="${houselist.price }" id="price" size="50" type="text"></td>
                             </tr>
                              <tr>
@@ -109,8 +109,8 @@
                               <td>
                                 <select name="status" id="status" class="required">
                                 
-                                <option value="已租赁" <c:if test="${houselist.status == '已租赁'}">selected</c:if>>已租赁</option>  
-                            <option value="未租赁" <c:if test="${houselist.status == '未租赁'}">selected</c:if>>未租赁</option> 
+                            <option value="未售出" <c:if test="${houselist.status == '未售出'}">selected</c:if>>未售出</option>
+                                <option value="已售出" <c:if test="${houselist.status == '已售出'}">selected</c:if>>已售出</option>
                                 </select>
                             </td>
                             </tr>

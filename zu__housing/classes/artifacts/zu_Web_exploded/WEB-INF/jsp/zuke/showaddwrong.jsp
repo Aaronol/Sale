@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>房屋租赁系统</title>
+    <title>房产销售系统</title>
     <link rel="stylesheet" type="text/css" href="/text2/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
@@ -52,10 +52,10 @@
 									style="FONT-WEIGHT: bold; FONT-STYLE: normal; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none">
 									<td>房屋id</td>
 									<td>地址</td>
-									<td>租金</td>
-									<td>租赁人</td>
-									<td>租赁人身份证号</td>
-									<td>租赁人联系电话</td>
+									<td>价格</td>
+									<td>姓名</td>
+									<td>用户身份证号</td>
+									<td>用户联系电话</td>
 									<td>操作</td>
 									
 								</tr>
