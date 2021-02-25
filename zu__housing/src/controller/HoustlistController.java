@@ -12,6 +12,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,12 +36,12 @@ public class HoustlistController {
 
     @RequestMapping("/houselist")
     public String houselist(Model model, HttpSession httpSession, @RequestParam(required = false, defaultValue = "1") Integer page,
-                            @RequestParam(required = false, defaultValue = "2") Integer pageSize) {
+                            @RequestParam(required = false, defaultValue = "10") Integer pageSize) {
         User user1 = (User) httpSession.getAttribute("user");
         Userlist userlist = userlistService.findhasuserlist(user1.getId());
         PageHelper.startPage(page, pageSize);
         List<Houselist> houselist = houselistService.selectAll();
-        houselist = houselist.stream().filter(x -> x.getStatus().equals("未售出")).collect(Collectors.toList());
+        houselist.removeIf(next -> !next.getStatus().equals("未售出"));
         List<Apply> applies = applyService.findbyusr_id(Integer.toString(userlist.getId()));
         for (Apply x : applies) {
             Houselist applylist = new Houselist();

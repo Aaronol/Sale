@@ -67,17 +67,6 @@
                     required : true,
                    
                   
-                },
-                fromdate: {
-                    required : true,
-                },
-                todate: {
-                    required : true,
-                },
-                payday: {
-                    required : true,
-                    min:0,
-                    max:31,
                 }
                 
             },
@@ -91,40 +80,29 @@
                   
                 },
                 chuzu : {
-                    required : "出租方不能为空",
+                    required : "售方不能为空",
                    
                   
                 },
                 price: {
-                    required : "租金不能为空",
-                    min: "请输入正确的租金"
+                    required : "价格不能为空",
+                    min: "请输入正确的价格"
                   
                 },
                 chuzu_idcard: {
-                    required : "出租方证件号不能为空",
+                    required : "售房证件号不能为空",
                     
                   
                 },
                 zuke: {
-                    required : "承租方不能为空",
+                    required : "买方不能为空",
                     
                   
                 },
                 zuke_idcard: {
-                    required : "承租方证件号不能为空",
+                    required : "售方证件号不能为空",
                    
                   
-                },
-                fromdate: {
-                    required : "起租时间不能为空",
-                },
-                todate: {
-                    required : "退租时间不能为空",
-                },
-                payday: {
-                    required : "每月交租日不能为空",
-                    min:"每月交租日必须大于0",
-                    max:"每月交租日必须小于31",
                 }
                 
             }
@@ -155,36 +133,20 @@
                                 <td><input class="common-text" name="address" value="${hetong.address }" id="address" size="50" type="text"></td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>出租方（甲方）：</th>
+                                <th><i class="require-red">*</i>售方（甲方）：</th>
                                 <td><input class="common-text" name="chuzu" value="${hetong.chuzu }" id="chuzu" size="50" type="text" ></td>
                             </tr>
                            <tr>
-                                <th><i class="require-red">*</i>出租方（甲方）证件号码：</th>
+                                <th><i class="require-red">*</i>售方（甲方）证件号码：</th>
                                 <td><input class="common-text" name="chuzu_idcard" value="${hetong.chuzu_idcard}" id="chuzu_idcard" size="50" type="text"></td>
                             </tr>
                              <tr>
-                                <th><i class="require-red">*</i>承租方（乙方）：</th>
+                                <th><i class="require-red">*</i>买方（乙方）：</th>
                               <td><input class="common-text" name="zuke" value="${hetong.zuke}" id="zuke" size="50" type="text"></td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>承租方（乙方）证件号码：</th>
+                                <th><i class="require-red">*</i>买方（乙方）证件号码：</th>
                               <td><input class="common-text" name="zuke_idcard" value="${hetong.zuke_idcard}" id="zuke_idcard" size="50" type="text"></td>
-                            </tr>
-                             <tr>
-                                <th><i class="require-red">*</i>起租时间：</th>
-                              <td><input class="common-text" name="fromdate" id="fromdate" value="${hetong.fromdate}" size="50"  type="text" readonly></td>
-                            </tr>
-                            <tr>
-                                <th><i class="require-red">*</i>退租时间：</th>
-                              <td><input class="common-text" name="todate" id="todate" value="${hetong.todate}" size="50"  type="text" readonly></td>
-                            </tr>
-                            <tr>
-                                <th><i class="require-red">*</i>每月租金：</th>
-                              <td><input class="common-text" name="price" id="price" value="${hetong.price}" size="50"  type="text" ></td>
-                            </tr>
-                            <tr>
-                                <th><i class="require-red">*</i>每月交租日（数字）：</th>
-                              <td><input class="common-text" name="payday" id="payday" value="${hetong.payday}" size="50"  type="text" ></td>
                             </tr>
 								<tr>
                                 <th></th>

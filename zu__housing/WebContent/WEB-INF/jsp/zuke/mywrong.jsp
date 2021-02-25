@@ -24,7 +24,7 @@
 	var error="${param.error}";
 	if(error=="inserttopaid"){
 
-	alert("租金信息添加成功！");
+	alert("信息添加成功！");
 	}
 		
 	</script>
@@ -53,7 +53,7 @@
 									<td>房屋id</td>
 									<td>地址</td>
 									<td>报障日期</td>
-									<td>租赁人</td>
+									<td>姓名</td>
 									<td>报障内容</td>
 									<td>状态</td>
 									

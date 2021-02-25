@@ -24,7 +24,7 @@
 	var error="${param.error}";
 	if(error=="zusuccess"){
 
-	alert("该房已租赁，可在租赁列表中查看详情！");
+	alert("该房已售出，可在已售信息中查看详情！");
 	}else if(error=="checkoutsuccess"){
 		alert("该合同已被终止！");
 	}
@@ -34,7 +34,7 @@
 <body>
 <div>
 <div class="result-title">
-<h1>在租列表</h1>
+<h1>已售信息</h1>
 </div>
 	<form id="houseForm" name="houseForm"
 		action="/text2/zulist/findzulist.action"
@@ -55,9 +55,9 @@
 									<td>房屋id</td>
 									<td>地址</td>
 									<td>价格</td>
-									<td>租赁人</td>
-									<td>租赁人身份证号</td>
-									<td>租赁人联系电话</td>
+									<td>姓名</td>
+									<td>身份证号</td>
+									<td>联系电话</td>
 									<td>操作</td>
 									
 								</tr>

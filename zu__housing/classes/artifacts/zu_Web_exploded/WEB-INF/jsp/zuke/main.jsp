@@ -51,7 +51,7 @@
         <div class="topbar-logo-wrap clearfix">
             <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
             <ul class="navbar-list clearfix">
-                <li><a class="on sendRequest" href="javascript::void(0)" onclick="to_page('toindex.action')">首页</a></li>
+                <li><a class="on sendRequest" onclick="location='/text2/houselist.action'">首页</a></li>
                
             </ul>
         </div>
@@ -81,11 +81,9 @@
                     </div>
                 </li>
                 <li>
-                    <a class="a"><i class="icon-font">&#xe018;</i>租赁信息</a>
+                    <a class="a"><i class="icon-font">&#xe018;</i>已购房屋信息</a>
                  <div class="p"><ul class="sub-menu">
-                        <li><a href="/text2/zulist/myzulist.action"><i class="icon-font">&#xe017;</i>我的租赁</a></li>
-                        <li><a href="/text2/checkout/getmycheckout.action"><i class="icon-font">&#xe037;</i>已退租列表</a></li>
-                        
+                        <li><a href="/text2/zulist/myzulist.action"><i class="icon-font">&#xe017;</i>已购信息查看</a></li>
                     </ul>
                     </div>
                 </li>
@@ -93,18 +91,9 @@
                     <a class="a"><i class="icon-font">&#xe018;</i>我的申请</a>
                 <div class="p"><ul class="sub-menu">
                         <li><a href="/text2/getmyapply.action"><i class="icon-font">&#xe017;</i>看房申请列表</a></li>
-                        <li><a href="/text2/applyout/getmyapplyout.action"><i class="icon-font">&#xe037;</i>退租申请列表</a></li>
-                        
+
                     </ul>
                     </div>
-                </li>
-                <li>
-                    <a class="a"><i class="icon-font">&#xe018;</i>租金信息</a>
-               <div class="p">     <ul class="sub-menu">
-                        <li><a href="/text2/paid/mytopaidlist.action"><i class="icon-font">&#xe017;</i>待缴租金</a></li>
-                       	<li><a href="/text2/paid/findmypaid.action"><i class="icon-font">&#xe017;</i>已缴租金</a></li>
-                        
-                    </ul></div>
                 </li>
                 <li>
                     <a class="a"><i class="icon-font">&#xe018;</i>报障模块</a>
@@ -115,9 +104,9 @@
                     </ul></div>
                 </li>
                 <li>
-                    <a class="a"><i class="icon-font">&#xe018;</i>其他操作</a>
+                    <a class="a"><i class="icon-font">&#xe018;</i>个人信息管理</a>
                   <div class="p">   <ul class="sub-menu">
-                        <li><a href="/text2/findhasuserlist.action"><i class="icon-font">&#xe017;</i>账户绑定</a></li>
+                        <li><a href="/text2/findhasuserlist.action"><i class="icon-font">&#xe017;</i>个人信息设置</a></li>
                        	
                         
                     </ul></div>
